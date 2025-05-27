@@ -8,16 +8,20 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-gray-900 px-6 max-w-4xl">
         <div className="animate-fade-in">
-          {/* Designer Photo Placeholder */}
-          <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gray-100 border-4 border-[#ffcc00] flex items-center justify-center overflow-hidden shadow-lg">
-            <div className="text-gray-500 text-xs">Foto do Designer</div>
+          {/* Designer Photo */}
+          <div className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-[#ffcc00] flex items-center justify-center overflow-hidden shadow-lg">
+            <img 
+              src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" 
+              alt="Max Demian"
+              className="w-full h-full object-cover"
+            />
           </div>
           
           <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">
-            UX/UI Designer
+            Max Demian
           </h1>
           <h2 className="text-base md:text-lg mb-3 text-gray-600">
-            Ilustradora & Infografista
+            Portfólio UX/UI Designer, ilustrador e infografista
           </h2>
           <p className="text-sm text-gray-600 mb-5 max-w-xl mx-auto leading-relaxed">
             Criando experiências digitais excepcionais através de design centrado no usuário, 
