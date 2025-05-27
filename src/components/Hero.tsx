@@ -10,21 +10,21 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" 
           alt="Design Background"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-900/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/60"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-6 max-w-4xl">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             UX/UI Designer
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-6 text-slate-200">
+          <h2 className="text-xl md:text-2xl mb-6 text-slate-200">
             Ilustradora & Infografista
           </h2>
-          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Criando experiências digitais excepcionais através de design centrado no usuário, 
             ilustrações impactantes e infográficos informativos.
           </p>

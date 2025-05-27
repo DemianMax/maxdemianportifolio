@@ -1,96 +1,111 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const WorkPortfolio = () => {
-  const portfolioItems = [
-    {
-      category: 'UX/UI Design',
-      title: 'App E-commerce Mobile',
-      description: 'Design completo de aplicativo mobile para e-commerce com foco na experiência do usuário',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
-      category: 'UX/UI Design',
-      title: 'Dashboard B2B',
-      description: 'Interface administrativa para sistema de gestão empresarial com dados complexos',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
-      gradient: 'from-purple-500 to-pink-500'
-    },
-    {
-      category: 'UX/UI Design',
-      title: 'Landing Page SaaS',
-      description: 'Página de conversão para software empresarial com alta taxa de conversão',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-      gradient: 'from-green-500 to-blue-500'
-    },
-    {
-      category: 'Infografia',
-      title: 'Relatório Anual 2024',
-      description: 'Infográficos para visualização de dados complexos de forma clara e atrativa',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop',
-      gradient: 'from-orange-500 to-red-500'
-    },
-    {
-      category: 'Ilustração',
-      title: 'Ilustrações Digitais',
-      description: 'Conjunto de ilustrações personalizadas para marca e comunicação visual',
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop',
-      gradient: 'from-teal-500 to-green-500'
-    },
-    {
-      category: 'Infografia',
-      title: 'Guia de Processos',
-      description: 'Infográficos explicativos para processos complexos de negócio',
-      image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=800&h=600&fit=crop',
-      gradient: 'from-indigo-500 to-purple-500'
-    }
-  ];
+  const portfolioData = {
+    'ux-ui': [
+      {
+        title: 'App E-commerce Mobile',
+        description: 'Design completo de aplicativo mobile para e-commerce',
+        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop',
+      },
+      {
+        title: 'Dashboard B2B',
+        description: 'Interface administrativa para sistema de gestão empresarial',
+        image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
+      },
+      {
+        title: 'Landing Page SaaS',
+        description: 'Página de conversão para software empresarial',
+        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
+      }
+    ],
+    'infografia': [
+      {
+        title: 'Relatório Anual 2024',
+        description: 'Infográficos para visualização de dados complexos',
+        image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop',
+      },
+      {
+        title: 'Guia de Processos',
+        description: 'Infográficos explicativos para processos de negócio',
+        image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=800&h=600&fit=crop',
+      }
+    ],
+    'ilustracao': [
+      {
+        title: 'Ilustrações Digitais',
+        description: 'Conjunto de ilustrações personalizadas para marca',
+        image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop',
+      },
+      {
+        title: 'Identidade Visual',
+        description: 'Ilustrações para comunicação visual corporativa',
+        image: 'https://images.unsplash.com/photo-1558655146-364adbe807d8?w=800&h=600&fit=crop',
+      }
+    ]
+  };
 
   return (
-    <section id="portfolio" className="py-20 bg-slate-800">
+    <section id="portfolio" className="py-16 bg-slate-800">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Trabalhos em Destaque
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Uma seleção dos meus projetos mais recentes em UX/UI Design, Infografia e Ilustração
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Uma seleção dos meus projetos mais recentes
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioItems.map((item, index) => (
-            <div 
-              key={index}
-              className="group relative overflow-hidden rounded-2xl bg-slate-700 hover:transform hover:scale-105 transition-all duration-500"
-            >
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+        <Tabs defaultValue="ux-ui" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-slate-700 mb-8">
+            <TabsTrigger value="ux-ui" className="text-white data-[state=active]:bg-blue-600">
+              UX/UI Design
+            </TabsTrigger>
+            <TabsTrigger value="ilustracao" className="text-white data-[state=active]:bg-purple-600">
+              Ilustração
+            </TabsTrigger>
+            <TabsTrigger value="infografia" className="text-white data-[state=active]:bg-green-600">
+              Infografia
+            </TabsTrigger>
+          </TabsList>
+
+          {Object.entries(portfolioData).map(([category, items]) => (
+            <TabsContent key={category} value={category}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {items.map((item, index) => (
+                  <div 
+                    key={index}
+                    className="group relative overflow-hidden rounded-xl bg-slate-700 hover:transform hover:scale-105 transition-all duration-300"
+                  >
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    
+                    <div className="p-4">
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-300 text-sm mb-3">
+                        {item.description}
+                      </p>
+                      <button className="flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors text-sm">
+                        Ver Projeto <ExternalLink size={14} className="ml-2" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
-              
-              <div className="p-6">
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${item.gradient} mb-3`}>
-                  {item.category}
-                </span>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-slate-300 mb-4">
-                  {item.description}
-                </p>
-                <button className="flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors">
-                  Ver Projeto <ExternalLink size={16} className="ml-2" />
-                </button>
-              </div>
-            </div>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
       </div>
     </section>
   );
