@@ -10,7 +10,7 @@ const Career = () => {
       period: '2023 - Atual',
       location: 'São Paulo, SP',
       description: 'Liderança de projetos de UX para produtos digitais B2B, mentoria de equipe e implementação de design system',
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-blue-400 to-purple-400'
     },
     {
       company: 'Digital Solutions Inc.',
@@ -18,7 +18,7 @@ const Career = () => {
       period: '2021 - 2023',
       location: 'Rio de Janeiro, RJ',
       description: 'Gestão de produtos digitais e criação de experiências para plataformas e-commerce com milhões de usuários',
-      color: 'from-green-500 to-teal-500'
+      color: 'from-green-400 to-teal-400'
     },
     {
       company: 'Creative Studio Pro',
@@ -26,7 +26,7 @@ const Career = () => {
       period: '2019 - 2021',
       location: 'Belo Horizonte, MG',
       description: 'Desenvolvimento de interfaces e criação de ilustrações para campanhas publicitárias e branding',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-400 to-pink-400'
     },
     {
       company: 'StartupXYZ',
@@ -34,7 +34,7 @@ const Career = () => {
       period: '2018 - 2019',
       location: 'Porto Alegre, RS',
       description: 'Criação de infográficos para relatórios corporativos e materiais de comunicação visual',
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-400 to-red-400'
     },
     {
       company: 'Agência Criativa 360',
@@ -42,18 +42,18 @@ const Career = () => {
       period: '2017 - 2018',
       location: 'Curitiba, PR',
       description: 'Desenvolvimento de peças gráficas e apoio em projetos de identidade visual para diversos clientes',
-      color: 'from-indigo-500 to-blue-500'
+      color: 'from-indigo-400 to-blue-400'
     }
   ];
 
   return (
-    <section id="career" className="py-20 bg-slate-900">
+    <section id="career" className="py-12 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Trajetória Profissional
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             Uma jornada de crescimento contínuo no universo do design e experiência do usuário
           </p>
         </div>
@@ -61,35 +61,35 @@ const Career = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-400"></div>
             
             {experiences.map((exp, index) => (
-              <div key={index} className="relative mb-12 ml-20">
+              <div key={index} className="relative mb-8 ml-20">
                 {/* Timeline dot */}
-                <div className={`absolute -left-14 top-6 w-4 h-4 rounded-full bg-gradient-to-r ${exp.color}`}></div>
+                <div className={`absolute -left-14 top-6 w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`}></div>
                 
-                <div className="bg-slate-800 rounded-2xl p-6 hover:bg-slate-700 transition-all duration-300 group hover:transform hover:scale-105">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-all duration-300 border">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">
                         {exp.position}
                       </h3>
-                      <h4 className={`text-lg font-semibold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
+                      <h4 className={`text-base font-semibold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
                         {exp.company}
                       </h4>
                     </div>
-                    <div className="flex flex-col md:items-end text-slate-300 mt-2 md:mt-0">
+                    <div className="flex flex-col md:items-end text-gray-600 mt-2 md:mt-0">
                       <div className="flex items-center mb-1">
-                        <Calendar size={16} className="mr-2" />
+                        <Calendar size={14} className="mr-2" />
                         <span className="text-sm">{exp.period}</span>
                       </div>
                       <div className="flex items-center">
-                        <MapPin size={16} className="mr-2" />
+                        <MapPin size={14} className="mr-2" />
                         <span className="text-sm">{exp.location}</span>
                       </div>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-sm">
                     {exp.description}
                   </p>
                 </div>

@@ -49,37 +49,37 @@ const WorkPortfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-16 bg-slate-800">
+    <section id="portfolio" className="py-12 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Trabalhos em Destaque
           </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             Uma seleção dos meus projetos mais recentes
           </p>
         </div>
 
         <Tabs defaultValue="ux-ui" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-slate-700 mb-8">
-            <TabsTrigger value="ux-ui" className="text-white data-[state=active]:bg-blue-600">
+          <TabsList className="grid w-full grid-cols-3 bg-white border mb-6">
+            <TabsTrigger value="ux-ui" className="text-gray-700 data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700">
               UX/UI Design
             </TabsTrigger>
-            <TabsTrigger value="ilustracao" className="text-white data-[state=active]:bg-purple-600">
+            <TabsTrigger value="ilustracao" className="text-gray-700 data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700">
               Ilustração
             </TabsTrigger>
-            <TabsTrigger value="infografia" className="text-white data-[state=active]:bg-green-600">
+            <TabsTrigger value="infografia" className="text-gray-700 data-[state=active]:bg-green-50 data-[state=active]:text-green-700">
               Infografia
             </TabsTrigger>
           </TabsList>
 
           {Object.entries(portfolioData).map(([category, items]) => (
             <TabsContent key={category} value={category}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {items.map((item, index) => (
                   <div 
                     key={index}
-                    className="group relative overflow-hidden rounded-xl bg-slate-700 hover:transform hover:scale-105 transition-all duration-300"
+                    className="group relative overflow-hidden rounded-lg bg-white border hover:transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
                   >
                     <div className="aspect-video overflow-hidden">
                       <img 
@@ -90,13 +90,13 @@ const WorkPortfolio = () => {
                     </div>
                     
                     <div className="p-4">
-                      <h3 className="text-lg font-bold text-white mb-2">
+                      <h3 className="text-base font-bold text-gray-900 mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-slate-300 text-sm mb-3">
+                      <p className="text-gray-600 text-sm mb-3">
                         {item.description}
                       </p>
-                      <button className="flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors text-sm">
+                      <button className="flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm">
                         Ver Projeto <ExternalLink size={14} className="ml-2" />
                       </button>
                     </div>

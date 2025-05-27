@@ -5,46 +5,46 @@ import { Users, Lightbulb, Settings, Star } from 'lucide-react';
 const Skills = () => {
   const skills = [
     {
-      icon: <Lightbulb className="w-6 h-6" />,
+      icon: <Lightbulb className="w-5 h-5" />,
       title: 'Design Thinking',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-400 to-orange-400'
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-5 h-5" />,
       title: 'User Experience',
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-blue-400 to-purple-400'
     },
     {
-      icon: <Settings className="w-6 h-6" />,
+      icon: <Settings className="w-5 h-5" />,
       title: 'Sistemas B2B & B2C',
-      color: 'from-green-500 to-teal-500'
+      color: 'from-green-400 to-teal-400'
     },
     {
-      icon: <Star className="w-6 h-6" />,
+      icon: <Star className="w-5 h-5" />,
       title: 'Product Owner',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-400 to-pink-400'
     }
   ];
 
   return (
-    <section id="skills" className="py-16 bg-slate-800">
+    <section id="skills" className="py-12 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Aptidões & Competências
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="bg-slate-900 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group hover:transform hover:scale-105 text-center"
+              className="bg-white rounded-lg p-4 hover:bg-gray-50 transition-all duration-300 text-center border"
             >
-              <div className={`w-12 h-12 mx-auto rounded-xl bg-gradient-to-br ${skill.color} flex items-center justify-center text-white mb-3 group-hover:scale-110 transition-transform`}>
+              <div className={`w-10 h-10 mx-auto rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center text-white mb-2`}>
                 {skill.icon}
               </div>
-              <h3 className="text-white font-semibold">
+              <h3 className="text-gray-900 font-medium text-sm">
                 {skill.title}
               </h3>
             </div>

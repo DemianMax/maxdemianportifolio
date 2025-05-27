@@ -10,7 +10,7 @@ import Contact from '../components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-white pt-16">
       <Header />
       <Hero />
       <WorkPortfolio />

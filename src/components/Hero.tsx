@@ -4,40 +4,35 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" 
-          alt="Design Background"
-          className="w-full h-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/60"></div>
-      </div>
-
+    <section className="min-h-screen flex items-center justify-center relative bg-white">
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl">
+      <div className="relative z-10 text-center text-gray-900 px-6 max-w-4xl">
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          {/* Designer Photo Placeholder */}
+          <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="text-gray-500 text-sm">Foto do Designer</div>
+          </div>
+          
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             UX/UI Designer
           </h1>
-          <h2 className="text-xl md:text-2xl mb-6 text-slate-200">
+          <h2 className="text-lg md:text-xl mb-4 text-gray-700">
             Ilustradora & Infografista
           </h2>
-          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
             Criando experiências digitais excepcionais através de design centrado no usuário, 
             ilustrações impactantes e infográficos informativos.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a 
               href="#portfolio"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
             >
               Ver Portfolio
             </a>
             <a 
               href="#contact"
-              className="border-2 border-white/30 hover:border-white text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-white/10"
+              className="border-2 border-gray-300 hover:border-gray-500 text-gray-700 hover:text-gray-900 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:bg-gray-50"
             >
               Entre em Contato
             </a>
@@ -47,7 +42,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <ArrowDown className="text-white animate-bounce" size={32} />
+        <ArrowDown className="text-gray-600 animate-bounce" size={28} />
       </div>
     </section>
   );

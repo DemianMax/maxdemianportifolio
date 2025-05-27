@@ -14,44 +14,44 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
-      <nav className="container mx-auto px-6 py-4">
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+      <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             UX Designer
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-6">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-300 hover:text-white transition-colors duration-300 relative group"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-300 relative group text-sm font-medium"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-gray-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="md:hidden mt-3 pb-3">
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-slate-300 hover:text-white transition-colors duration-300"
+                className="block py-2 text-gray-700 hover:text-gray-900 transition-colors duration-300 text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
