@@ -47,7 +47,7 @@ const WorkPortfolio = () => {
         </div>
 
         <Tabs defaultValue="ux-ui" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3 border mb-4 rounded-md bg-slate-100">
+          <TabsList className="grid w-full grid-cols-3 border mb-4 rounded-md bg-transparent">
             <TabsTrigger value="ux-ui" className="text-gray-700 data-[state=active]:bg-[#ffcc00] data-[state=active]:text-gray-900 rounded-full text-xs">
               UX/UI Design
             </TabsTrigger>
