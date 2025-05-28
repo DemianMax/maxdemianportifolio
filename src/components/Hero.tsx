@@ -13,9 +13,7 @@ const Hero = () => {
           <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">
             Olá, sou o Max
           </h1>
-          <h2 className="text-base md:text-lg mb-3 text-gray-600">
-            Portfólio UX/UI Designer, ilustrador e infografista
-          </h2>
+          <h2 className="text-base md:text-lg mb-3 text-gray-600">UX/UI Designer, ilustrador e infografista</h2>
           <p className="text-sm text-gray-600 mb-5 max-w-xl mx-auto leading-relaxed">
             Criando experiências digitais excepcionais através de design centrado no usuário, 
             ilustrações impactantes e infográficos informativos.
