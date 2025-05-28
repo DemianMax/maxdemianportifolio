@@ -4,7 +4,7 @@ const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center relative bg-white">
       {/* Top Image - Full Width */}
       <div className="w-full h-64 md:h-80 overflow-hidden">
-        <img src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" alt="Max Demian" className="w-full h-full object-fill" />
+        <img src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" alt="Max Demian" className="w-full h-full object-scale-down" />
       </div>
       
       {/* Content */}
