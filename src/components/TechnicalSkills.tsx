@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
-import { figma, framer } from 'lucide-react';
 
 const TechnicalSkills = () => {
   const softwares = [
