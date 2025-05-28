@@ -3,8 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import WorkPortfolio from '../components/WorkPortfolio';
-import Software from '../components/Software';
-import Skills from '../components/Skills';
+import TechnicalSkills from '../components/TechnicalSkills';
 import Career from '../components/Career';
 import Contact from '../components/Contact';
 
@@ -14,8 +13,7 @@ const Index = () => {
       <Header />
       <Hero />
       <WorkPortfolio />
-      <Software />
-      <Skills />
+      <TechnicalSkills />
       <Career />
       <Contact />
     </div>

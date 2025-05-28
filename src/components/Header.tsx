@@ -7,8 +7,7 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Softwares', href: '#software' },
-    { name: 'Aptidões', href: '#skills' },
+    { name: 'Habilidades', href: '#skills' },
     { name: 'Carreira', href: '#career' },
     { name: 'Contato', href: '#contact' }
   ];
@@ -18,7 +17,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div className="text-lg font-bold text-gray-900">
-            UX Designer
+            Max Demian
           </div>
           
           {/* Desktop Menu */}

@@ -4,21 +4,21 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-white">
+    <section className="min-h-screen flex flex-col justify-center relative bg-white">
+      {/* Top Image - Full Width */}
+      <div className="w-full h-64 md:h-80 overflow-hidden">
+        <img 
+          src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" 
+          alt="Max Demian"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       {/* Content */}
-      <div className="relative z-10 text-center text-gray-900 px-6 max-w-4xl">
+      <div className="relative z-10 text-center text-gray-900 px-6 max-w-4xl mx-auto py-12">
         <div className="animate-fade-in">
-          {/* Designer Photo */}
-          <div className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-[#ffcc00] flex items-center justify-center overflow-hidden shadow-lg">
-            <img 
-              src="/lovable-uploads/35431ef9-1397-4d26-8f89-496ea6367848.png" 
-              alt="Max Demian"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
           <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">
-            Max Demian
+            Olá, sou o Max
           </h1>
           <h2 className="text-base md:text-lg mb-3 text-gray-600">
             Portfólio UX/UI Designer, ilustrador e infografista
